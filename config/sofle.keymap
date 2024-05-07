@@ -21,7 +21,7 @@
 #define U_MOUSE_MOVE_MAX 2000                     /* <--- New max speed setting (default: 600) */
 
 &mmv {
-	time-to-max-speed-ms = <400>;             /* <--- How long time until max speed is reached (default: 500) */
+	time-to-max-speed-ms = <300>;             /* <--- How long time until max speed is reached (default: 500) */
 };
 
 / {
@@ -99,11 +99,11 @@
 // ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮                               ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮
      &bt BT_CLR   &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4                                    &none          &none         &none         &none        &none         &none
 // ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤                               ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼
-&ext_power EP_TOG &rgb_ug RGB_HUD &rgb_ug RGB_HUI &rgb_ug RGB_SAD &rgb_ug RGB_SAI &rgb_ug RGB_EFF                      &msc MOVE_UP    &none         &none         &none        &none         &none
+&ext_power EP_TOG &rgb_ug RGB_HUD &rgb_ug RGB_HUI &rgb_ug RGB_SAD &rgb_ug RGB_SAI &rgb_ug RGB_EFF                      &msc MOVE_DOWN    &none         &none         &none        &none         &none
 // ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤                               ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼
         &none         &none       &mkp LCLK      &mkp MCLK      &mkp RCLK    &none                                     &mmv MOVE_LEFT &mmv MOVE_DOWN &mmv MOVE_UP &mmv MOVE_RIGHT &none         &none
 // ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤─────────────╮   ╭─────────────├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼
-        &none         &none       &none          &none          &none        &none     &rgb_ug RGB_TOG       &none     &msc MOVE_DOWN     &none         &none         &none       &none         &none
+        &none         &none       &none          &none          &none        &none     &rgb_ug RGB_TOG       &none     &msc MOVE_UP      &none         &none         &none       &none         &none
 // ╰─────────────┴─────────────┴─────────────┼─────────────┼─────────────┼─────────────┤─────────────┤   ├─────────────├─────────────┼─────────────┼─────────────┴─────────────┼─────────────┴─────────────╯
                                 &out OUT_USB   &out OUT_BLE  &out OUT_TOG    &none         &none             &none         &none          &none         &none         &none
 //                             ╰─────────────┴─────────────┴─────────────┴─────────────┼─────────────╯   ╰─────────────┴─────────────┴─────────────┴─────────────┼─────────────╯
